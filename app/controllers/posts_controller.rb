@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.order(:id) #.order(:キー)何順に並べるか
   end
 
   def show
