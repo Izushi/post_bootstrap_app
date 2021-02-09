@@ -1,15 +1,2 @@
 <h1>編集</h1>
-<%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :content, "内容" %>
-    <%= form.text_field :content %>
-  </div>
-  <div>
-    <%= form.submit "送信" %>
-  </div>
-<% end %>
-<%# コントローラーで作成したインスタンス@postがnewメソッドで新たに作成されて何も情報を持っていなければ自動的にcreateアクションへ、findメソッドなどで作成され、すでに情報を持っている場合はupdateアクションへ自動的に振り分ける。 %>
+<%= render "form", button_value: "更新" %>
