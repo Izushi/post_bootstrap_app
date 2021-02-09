@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def update
     @post.update!(post_params)
-    redirect_to post, notice: "更新しました"
+    redirect_to @post, notice: "更新しました"
   end
 
   def destroy
